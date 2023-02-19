@@ -63,9 +63,13 @@ boardC3.addEventListener("click", () => {
 
 function win() {
   if ((a1stat === "x" && a2stat === "x" && a3stat === "x") || (b1stat === "x" && b2stat === "x" && b3stat === "x") || (c1stat === "x" && c2stat === "x" && c3stat === "x") || (a1stat === "x" && b1stat === "x" && c1stat === "x") || (a2stat === "x" && b2stat === "x" && c2stat === "x") || (a3stat === "x" && b3stat === "x" && c3stat === "x") || (a1stat === "x" && b2stat === "x" && c3stat === "x") || (a3stat === "x" && b2stat === "x" && c1stat === "x")) {
-   document.getElementById("result").innerHTML = "Player One Wins!"
+   document.getElementById("result").innerHTML = "Player One Wins! Refresh the page to play again";
+
   } else if ((a1stat === "o" && a2stat === "o" && a3stat === "o") || (b1stat === "o" && b2stat === "o" && b3stat === "o") || (c1stat === "o" && c2stat === "o" && c3stat === "o") || (a1stat === "o" && b1stat === "o" && c1stat === "o") || (a2stat === "o" && b2stat === "o" && c2stat === "o") || (a3stat === "o" && b3stat === "o" && c3stat === "o") || (a1stat === "o" && b2stat === "o" && c3stat === "o") || (a3stat === "o" && b2stat === "o" && c1stat === "o")) {
-   document.getElementById("result").innerHTML = "Player Two Wins!"
+   document.getElementById("result").innerHTML = "Player Two Wins! Refresh the page to play again.";
+
+  } else if ((a1stat === "x" || a1stat === "o") && (a2stat === "x" || a2stat === "o") && (a3stat === "x" || a3stat === "o") && (b1stat === "x" || b1stat === "o") && (b2stat === "x" || b2stat === "o") && (b3stat === "x" || b3stat === "o") && (c1stat === "x" || c1stat === "o") && (c2stat === "x" || c2stat === "o") && (c3stat === "x" || c3stat === "o")) {
+   document.getElementById("result").innerHTML = "It's a tie! Refresh the page to play again.";
   }
 }
 
